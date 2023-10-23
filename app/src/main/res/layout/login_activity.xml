@@ -31,6 +31,7 @@
             android:textStyle="bold"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_gravity="center"
+            android:textColor="@color/black"
 
             android:layout_centerInParent="true" />
 
@@ -53,11 +54,12 @@
             android:text="Ingresa el usuario"
             android:textSize="20dp"
             android:textStyle="bold"
+            android:textColor="@color/black"
 
             app:layout_constraintBottom_toBottomOf="@id/supLayout" />
 
         <EditText
-            android:id="@+id/usuario"
+            android:id="@+id/usuarioInp"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:hint="Introduce el usuario"
@@ -71,7 +73,7 @@
     <LinearLayout
         android:id="@+id/linearLayoutBott"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:orientation="vertical"
         tools:ignore="ExtraText,MissingConstraints"
         app:layout_constraintTop_toBottomOf="@id/linearLayoutTop">
@@ -86,19 +88,35 @@
             android:text="Ingresa la contraseña"
             android:textSize="20dp"
             android:textStyle="bold"
+            android:textColor="@color/black"
 
             app:layout_constraintBottom_toBottomOf="@id/supLayout" />
 
         <EditText
             android:id="@+id/passwordInp"
-            android:layout_width="200dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:hint="Introduce la contraseña"
+            app:passwordToggleEnabled="true"
+            android:inputType="textPassword"
+
             app:layout_constraintBottom_toTopOf="@+id/inicSesion" />
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnIniciar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ENTRAR"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutBott"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="45dp"
+        android:gravity="center"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
